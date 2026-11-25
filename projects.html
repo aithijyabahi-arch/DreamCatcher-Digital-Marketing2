@@ -1,0 +1,522 @@
+<!DOCTYPE html><html lang="en">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808"><title>Our Projects | DreamCatcher</title><meta name="description" content="Explore creative projects by DreamCatcher Digital Agency."><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+      
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+:root {
+--black: #080808;
+--gold: #d6ad45;
+--cream: #faf8f2;
+--text: #222;
+--muted: #777;
+}
+
+body {
+font-family: 'DM Sans', sans-serif;
+background: var(--cream);
+color: var(--text);
+}
+
+.container {
+width: 90%;
+max-width: 1250px;
+margin: auto;
+}
+
+/* HEADER */
+
+.header {
+background: var(--black);
+padding: 20px 0;
+}
+
+.header-inner {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.brand {
+display: flex;
+align-items: center;
+gap: 12px;
+text-decoration: none;
+color: white;
+}
+
+.brand-mark {
+font-size: 27px;
+font-weight: 800;
+border: 2px solid var(--gold);
+padding: 7px 10px;
+}
+
+.brand-mark span,
+.brand-text strong span {
+color: var(--gold);
+}
+
+.brand-text {
+display: flex;
+flex-direction: column;
+}
+
+.brand-text strong {
+font-size: 20px;
+}
+
+.brand-text small {
+font-size: 9px;
+letter-spacing: 2px;
+color: #aaa;
+margin-top: 4px;
+}
+
+.back-btn {
+color: white;
+text-decoration: none;
+border: 1px solid var(--gold);
+padding: 12px 22px;
+border-radius: 30px;
+font-size: 13px;
+transition: .3s;
+}
+
+.back-btn:hover {
+background: var(--gold);
+color: var(--black);
+}
+
+/* HERO */
+
+.portfolio-hero {
+background: var(--black);
+color: white;
+text-align: center;
+padding: 100px 20px 115px;
+}
+
+.eyebrow {
+color: var(--gold);
+font-size: 12px;
+font-weight: 800;
+letter-spacing: 3px;
+}
+
+.portfolio-hero h1 {
+font-family: 'Playfair Display', serif;
+font-size: clamp(38px, 6vw, 68px);
+margin: 22px 0;
+}
+
+.portfolio-hero h1 span {
+color: var(--gold);
+}
+
+.portfolio-hero p {
+color: #bbb;
+font-size: 16px;
+line-height: 1.8;
+}
+
+.hero-line {
+width: 70px;
+height: 3px;
+background: var(--gold);
+margin: 35px auto 0;
+}
+
+/* PROJECT SECTION */
+
+.projects-section {
+padding: 90px 0 110px;
+}
+
+.section-heading {
+text-align: center;
+}
+
+.section-heading h2 {
+font-family: 'Playfair Display', serif;
+font-size: 43px;
+margin: 18px 0;
+}
+
+.section-heading h2 span {
+color: #bd921c;
+}
+
+.section-heading p {
+color: var(--muted);
+}
+
+/* FILTERS */
+
+.filters {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 12px;
+margin: 45px 0;
+}
+
+.filter-btn {
+padding: 12px 23px;
+border: 1px solid #ddd;
+border-radius: 30px;
+background: white;
+color: #333;
+font-family: inherit;
+font-weight: 600;
+cursor: pointer;
+transition: .3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+background: var(--gold);
+border-color: var(--gold);
+color: var(--black);
+}
+
+/* PROJECT GRID */
+
+.project-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 30px;
+}
+
+.project-card {
+background: white;
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 8px 30px rgba(0,0,0,.06);
+transition: .4s;
+}
+
+.project-card:hover {
+transform: translateY(-9px);
+box-shadow: 0 15px 35px rgba(0,0,0,.12);
+}
+
+.project-image {
+height: 260px;
+position: relative;
+overflow: hidden;
+}
+
+.project-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: .5s;
+}
+
+.project-card:hover img {
+transform: scale(1.08);
+}
+
+.project-category {
+position: absolute;
+bottom: 15px;
+left: 15px;
+background: var(--gold);
+color: var(--black);
+padding: 8px 14px;
+border-radius: 30px;
+font-size: 11px;
+font-weight: 800;
+}
+
+.project-info {
+padding: 24px;
+}
+
+.project-info h3 {
+font-size: 20px;
+margin-bottom: 10px;
+}
+
+.project-info p {
+font-size: 14px;
+color: var(--muted);
+line-height: 1.7;
+}
+
+/* CTA */
+
+.project-cta {
+background: var(--black);
+color: white;
+text-align: center;
+padding: 85px 20px;
+}
+
+.project-cta h2 {
+font-family: 'Playfair Display', serif;
+font-size: clamp(30px, 5vw, 48px);
+margin: 20px 0;
+}
+
+.project-cta h2 span {
+color: var(--gold);
+}
+
+.project-cta p {
+color: #aaa;
+margin-bottom: 30px;
+}
+
+.cta-btn {
+display: inline-block;
+background: var(--gold);
+color: var(--black);
+padding: 15px 28px;
+border-radius: 30px;
+font-weight: 800;
+text-decoration: none;
+transition: .3s;
+}
+
+.cta-btn:hover {
+background: white;
+transform: translateY(-3px);
+}
+
+/* FOOTER */
+
+.footer {
+background: #050505;
+color: white;
+text-align: center;
+padding: 45px 20px;
+}
+
+.footer-brand {
+font-size: 25px;
+font-weight: 800;
+color: white;
+text-decoration: none;
+}
+
+.footer-brand span {
+color: var(--gold);
+}
+
+.footer p {
+color: #999;
+font-size: 13px;
+margin-top: 14px;
+}
+
+.copyright {
+border-top: 1px solid #292929;
+padding-top: 20px;
+margin-top: 25px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+.project-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media (max-width: 600px) {
+
+.container {
+width: 92%;
+}
+
+.header {
+padding: 16px 0;
+}
+
+.brand-mark {
+font-size: 20px;
+}
+
+.brand-text strong {
+font-size: 16px;
+}
+
+.brand-text small {
+font-size: 7px;
+}
+
+.back-btn {
+padding: 10px 12px;
+font-size: 11px;
+}
+
+.portfolio-hero {
+padding: 75px 15px 85px;
+}
+
+.section-heading h2 {
+font-size: 34px;
+}
+
+.projects-section {
+padding: 65px 0;
+}
+
+.project-grid {
+grid-template-columns: 1fr;
+gap: 22px;
+}
+
+.project-image {
+height: 240px;
+}
+
+.filters {
+gap: 8px;
+}
+
+.filter-btn {
+padding: 10px 14px;
+font-size: 12px;
+}
+
+}
+</style>
+  </head>
+  <body>
+    
+  <!-- HEADER --><header class="header"><div class="container header-inner"><a href="index.html" class="brand">
+<span class="brand-mark">D<span>C</span></span><span class="brand-text">
+<strong>Dream<span>Catcher</span></strong>
+<small>CREATIVE DIGITAL AGENCY</small>
+</span>
+</a><a href="index.html" class="back-btn">
+<i class="fa-solid fa-arrow-left"></i> Back to Home
+</a></div></header><!-- HERO --><section class="portfolio-hero"><div class="container"><span class="eyebrow">OUR PORTFOLIO</span>
+
+<h1>Our Creative <span>Projects</span></h1><p>
+Every project tells a story. Explore our creativity,
+designs and digital marketing work.
+</p><div class="hero-line"></div></div></section><!-- PROJECTS --><section class="projects-section"><div class="container"><div class="section-heading">
+<span class="eyebrow">OUR WORK</span>
+<h2>Explore Our <span>Work</span></h2>
+<p>Creative ideas transformed into meaningful experiences.</p>
+</div><!-- FILTERS --><div class="filters"><button class="filter-btn active" data-filter="all">All Projects</button>
+
+<button class="filter-btn" data-filter="marketing">Digital Marketing</button>
+
+<button class="filter-btn" data-filter="graphic">Graphic Design</button>
+
+<button class="filter-btn" data-filter="branding">Brand Identity</button>
+
+</div><!-- PROJECT GRID --><div class="project-grid"><!-- PROJECT 1 --><article class="project-card" data-category="marketing"><div class="project-image">
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=85" alt="Digital marketing project"><span class="project-category">Digital Marketing</span>
+
+</div><div class="project-info">
+<h3>Digital Campaign</h3>
+<p>Creative marketing strategies designed to increase online visibility.</p>
+</div></article><!-- PROJECT 2 --><article class="project-card" data-category="branding"><div class="project-image">
+<img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=900&q=85" alt="Brand identity project"><span class="project-category">Brand Identity</span>
+
+</div><div class="project-info">
+<h3>Brand Identity</h3>
+<p>Building memorable brand identities through thoughtful design.</p>
+</div></article><!-- PROJECT 3 --><article class="project-card" data-category="marketing"><div class="project-image">
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=85" alt="Creative strategy project"><span class="project-category">Digital Marketing</span>
+
+</div><div class="project-info">
+<h3>Creative Strategy</h3>
+<p>Connecting brands with their audiences through creative campaigns.</p>
+</div></article><!-- PROJECT 4 --><article class="project-card" data-category="graphic"><div class="project-image">
+<img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=900&q=85" alt="Graphic design project"><span class="project-category">Graphic Design</span>
+
+</div><div class="project-info">
+<h3>Creative Graphic Design</h3>
+<p>Visual communication that makes brands stand out.</p>
+</div></article><!-- PROJECT 5 --><article class="project-card" data-category="graphic"><div class="project-image">
+<img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=900&q=85" alt="Creative artwork"><span class="project-category">Graphic Design</span>
+
+</div><div class="project-info">
+<h3>Creative Artwork</h3>
+<p>Modern visual concepts for digital and promotional platforms.</p>
+</div></article><!-- PROJECT 6 --><article class="project-card" data-category="branding"><div class="project-image">
+<img src="https://images.unsplash.com/photo-1634942536790-2539db6a0d2e?auto=format&fit=crop&w=900&q=85" alt="Brand design"><span class="project-category">Brand Identity</span>
+
+</div><div class="project-info">
+<h3>Visual Branding</h3>
+<p>Distinctive visual experiences for growing businesses.</p>
+</div></article></div></div></section><!-- CTA --><section class="project-cta"><div class="container"><span class="eyebrow">HAVE A PROJECT IN MIND?</span>
+
+<h2>Let's Create Something <span>Amazing.</span></h2><p>Have an idea? Let's turn it into reality together.</p><a href="index.html#contact" class="cta-btn">
+Start a Project <i class="fa-solid fa-arrow-right"></i>
+</a></div></section><!-- FOOTER --><footer class="footer"><div class="container"><a href="index.html" class="footer-brand">Dream<span>Catcher</span></a>
+
+<p>Creative Thinking. Digital Excellence. Meaningful Results.</p><p class="copyright">
+© <span id="year"></span> DreamCatcher. All Rights Reserved.
+</p></div>
+</footer>
+    
+    <script>
+      
+document.addEventListener("DOMContentLoaded", function () {
+
+// AUTOMATIC COPYRIGHT YEAR
+
+const year = document.getElementById("year");
+
+if (year) {
+    year.textContent = new Date().getFullYear();
+}
+
+
+// PROJECT FILTER SYSTEM
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+const projectCards = document.querySelectorAll(".project-card");
+
+filterButtons.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+        const category = this.dataset.filter;
+
+        filterButtons.forEach(function (btn) {
+            btn.classList.remove("active");
+        });
+
+        this.classList.add("active");
+
+        projectCards.forEach(function (card) {
+
+            if (
+                category === "all" ||
+                card.dataset.category === category
+            ) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+
+        });
+
+    });
+
+});
+
+});
+      
+    </script>
+  </body>
+</html>
